@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta content="utf-8" http-equiv="encoding">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+<div class='yeah'></div>
+
+<div id='test'></div>
+</body>
+
+<script type='text/javascript'>
+//Fastest way of implementing document.ready with pure javascript with compatiblity
+//$(function(){}); OR (function(){ })();
+(function(){	
+
+
+	
+	
+ //Constructor
+function PrintStuff(myDocuments,id,numbers) {
+	this.documents = myDocuments;
+	this.ids = id;
+	
+
+	}
+
+
+   
+  //prototype property so that other instances (objects) can inherit it
+//Prototype Inthritance Reference -> Goes to the View
+    PrintStuff.prototype.print = function () {
+	var protoPrint = ('Id: '+ this.ids + this.documents);
+  //this.ids = Number(this.ids);
+  console.log('Length is: ' +  Number(this.ids).length);
+
+var length = 5; // user defined length
+
+
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(protoPrint); 
+  newDiv.appendChild(newContent); //add the text node to the newly created div. 
+document.body.insertBefore(newDiv, document.body.childNodes[0]);
+
+
+
+  
+    
+
+//console.log(protoPrint.length);
+
+
+	}
+
+
+	   //Instansiation -> Goes to the Contructor It inserts Data 
+	var newObj = new PrintStuff("I am a new Object and I can print.",1);
+		var newObj2 = new PrintStuff("I am a new Object and I can print.",2);
+   var newObj3 = new PrintStuff("I am a new Object and I can print.",3);
+   var newObj4 = new PrintStuff("I am a new Object and I can print.",4);
+	
+	newObj.print(); //Call back for object
+    	newObj2.print(); //Call back for object
+		newObj3.print(); //Call back for object
+		newObj4.print(); //Call back for object
+		
+		
+		
+		
+		$('#test').html('<a>hello</a>');
+		$('#test').find('a').attr('href','http://www.google.com')
+})();		
+    </script>
+</html>

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+</head>
+
+<body>
+
+
+</body>
+
+<script type='text/javascript'>
+//B Shall Inherit from A
+function A(a,vrTrue){
+  this.wavingEl = a;
+    this.vrTrue = true;
+ 
+}
+
+
+A.prototype = {
+  varA : null, 
+ 
+  doSomething : function(){
+    // ...
+
+
+  }
+}
+
+function B(a, b,vrTrue){
+  A.call(this, a,vrTrue);
+  this.varB = b;
+ 
+
+}
+
+
+//Two Prototype Inheritance 
+B.prototype = Object.create(A.prototype, {
+  varB : {
+    value: null, 
+    enumerable: true, 
+    configurable: true, 
+    writable: true,
+     
+
+    
+  },
+  doSomething : { 
+    value: function(){ // override
+      A.prototype.doSomething.apply(this, arguments); // call super
+      // ...
+
+ 
+   
+    },
+    
+
+    enumerable: true,
+    configurable: true, 
+    writable: true
+  },
+  
+      yum : {
+      
+     value: function(){
+      console.log('i am yum');
+      } 
+    },
+  
+});
+B.prototype.constructor = B;
+
+
+//Chained to B prototype so Inherited B properties
+//and A but adding/Changing its Own Properties
+
+//Dancer Shall Inherit From B 
+var Dancer = function(vrTrue,b,canDance){
+B.call(this,vrTrue);
+//Own Properties 
+this.vrTrue = false;
+ this.varB = b;
+this.canDance = true;
+
+
+
+}
+
+//Creating own Custom Prototype from Object Prototype B
+Dancer.prototype = Object.create(B.prototype);
+
+B.prototype.Talk = function(vrTrue){
+
+
+   
+    
+   //If the person can talk
+   if (this.vrTrue) {
+   
+    console.log('Hi, I am ' + this.varB + ' Yes i can talk, but i need to control my voice.');
+   }else{
+    console.log('Just waving my hand, You smile I smile, When You say Nothing At All, So corny, but I can dance, just look at my name tag it says ' + this.varB );
+   }
+}
+
+
+
+
+var person = new B('the Middle Born');
+
+var dancer = new Dancer('Black Sheep dancer');
+
+person.Talk();
+dancer.Talk();
+
+
+//Change B to b
+var b = new B(true);
+
+//Callbacks
+b.doSomething();
+b.yum();
+
+
+    </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+</head>
+
+<body>
+
+
+</body>
+<script type='text/javascript'>
+//Dynamic Creating Objects
+
+
+//Create Div
+var div = document.createElement('div');
+div.textContent = "Sup, y'all?";
+div.setAttribute('class', 'note');
+document.body.appendChild(div);
+
+//Create Span
+var span = document.createElement('span');
+span.textContent = "Hello!";
+div.appendChild(span);
+
+
+if (span.textContent) {
+    span.textContent = "Hello!";
+} else if (span.innerText) {
+    span.innerText = "Hello!";
+}
+
+/*jquery
+$(function(){
+    
+   var div = $('<div/>').text("Sup, y'all?").appendTo(document.body);
+$('<span/>').text('Hello!').appendTo(div); 
+});
+*/
+
+</script>
+
+</html>

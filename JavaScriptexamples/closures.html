@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+</head>
+
+<body>
+
+
+
+</body>
+
+<script type='text/javascript'>
+//Closures gets a function to Return another inner function value 
+
+
+var saver = function (value) {
+    return function () {
+        var value =50
+        return value + 20;
+    };
+};
+
+var retriever = saver(); // Equals 
+
+//alert(retriever());
+
+
+//New Function
+
+var add = function (a) {
+    return function (b) {
+        return a + b;
+    };
+};
+
+var addFive = add(5);
+
+//the inner function b is automatically the contextual object of addFive
+alert(addFive(10));
+
+
+
+</script>
+</html>

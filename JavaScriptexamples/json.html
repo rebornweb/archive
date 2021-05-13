@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+</head>
+
+<body>
+
+Check Console Log
+
+
+</body>
+
+<script type='text/javascript'>
+/*stringify makes JSON objects into a string and
+parse back into JSON objects*/
+
+var jsonString = JSON.stringify({
+    name: "Yoda",
+    age: 894,
+    lightsaber: "Green"
+});
+
+var jsonP = JSON.parse(jsonString);
+
+
+
+console.log(jsonString + ' Json Parsed: ' + jsonP );
+
+</script>
+</html>

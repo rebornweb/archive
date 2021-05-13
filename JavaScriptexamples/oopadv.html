@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<script type='text/javascript'>
+//Person is the Constructor, Remember Constructors, Prototypes, Closures and this object 
+var Person = function (name) {
+    this.name = name;
+//This will alert all the objects Persons Name
+    //alert(name);
+    
+    for(i=0; i < name.length; i++){
+
+console.log(name[i]);
+}
+
+Person.prototype.say = function(words){
+    
+    //This will alert all the objects name.words they say in context
+  alert(this.name + 'says:' + words + '');  
+  console.log(this.name + 'says:' + words + '');  
+};
+
+
+
+};
+
+//Object Create Block
+var tom = new Person('tom'),
+ whoisthisgirl = new Person('Whoisthischick???'),
+ americandream = new Person ('Jack&Diane'),
+ movieshaha = new Person('MonaLisa');
+movieshaha.say('Yes take me to a coffee first im the Chop shop girl');
+
+
+
+</script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+
+</html>

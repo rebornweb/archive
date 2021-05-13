@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<header>HEADER yum
+<h1 class='note'>Header Boxes</h1>
+</header>
+</body>
+
+<script type='text/javascript'>
+//Jquery Getters and Setters
+$(function(){
+$('.note').css('background', 'red').height(100);
+
+
+var currentHeight = $('.note').height(),
+    currentColor = $('.note').css('color');
+
+//alert( 'Current height: '  +currentHeight +' Current Color: ' + currentColor);
+
+//This is how you chain declaring mulitple objects
+var $header = $('header'),
+    $headerBoxes = $('.note',$header);
+
+    
+
+console.log('Header:'+ $header + 'Header Boxes:' + $headerBoxes);
+
+$headerBoxes.fadeOut(1000,function(){});
+
+});
+</script>
+</html>

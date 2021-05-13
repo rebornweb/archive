@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></scrip
+<div id='result'></div>
+
+</body>
+
+<script type='text/javascript'>
+//How to deal with a Javascript Array Append
+//.Prototype is used to chain the constructor or object
+
+function arrayAppend() {
+var a = [4,5,6];
+var b = [7,8,9];
+Array.prototype.push.apply(a, b);
+
+uneval(a); // is: [4, 5, 6, 7, 8, 9]
+
+document.getElementById('result').innerHTML = a;
+//alert(a);
+}
+  
+arrayAppend();
+
+</script>
+</html>

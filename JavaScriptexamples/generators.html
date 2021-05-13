@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+</head>
+
+<body>
+<h2>Fibonacci Sequence Add the Two Numbers Before the Result ahead</h2>
+<h3>Check Console Log</h3>
+<div id='Fibo'></div>
+
+</body>
+
+<script type='text/javascript'>
+/*Javascript Generators
+function* idMaker(){
+  var index = 0;
+  while(true)
+    yield index++;
+}
+
+var gen = idMaker();
+
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1z
+console.log(gen.next().value); // 2
+
+console.log(gen.next().value); // 2
+
+ Simple Generator Example*/
+function* fibonacci(){
+  var fn1 = 1;
+  var fn2 = 1;
+  while (true){  
+    var current = fn2;
+    fn2 = fn1;
+    fn1 = fn1 + current;
+    var reset = yield current;
+    if (reset){
+        fn1 = 1;
+        fn2 = 1;
+    }
+  }
+}
+
+var sequence = fibonacci();
+
+var appendsequence =  sequence.next().value;
+
+//Call the do the fibonacci expression xn= xn-1 + xn-2 100 times
+for (i=0; i < 100 ; i++) {
+console.log(sequence.next().value); 
+}
+   
+
+
+</script>
+</html>

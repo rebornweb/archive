@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+
+</head>
+
+<body>
+
+
+
+</body>
+
+<script type='text/javascript'>
+
+//Public Members
+function User(name) {
+this.name = name;
+}
+User.prototype.getName = function () { // public member
+return this.name;
+};
+var user = new User('John');
+console.log(user.getName());
+
+</script>
+</html>
