@@ -1,0 +1,270 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@font-face {
+  font-family: 'Digital';
+   src:    url('fonts/digital.woff') format('woff'),/* Pretty Modern Browsers */
+       url('fonts/digital.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+	  
+@mixin outline($value){
+    -webkit-outline:$value;
+    -moz-outline:$value;
+        outline:$value;    
+    }         
+            
+body{
+
+font-family:Century Gothic,sans-serif;
+
+}
+
+div#main{
+position:relative;
+text-align:center;
+left:25%;
+width:50%;
+margin:7px;
+border:1px black solid;
+
+
+
+}
+span#runner{
+  z-index:999;
+}
+
+div#metronomeBg{
+background: url("../images/main.png") no-repeat 50% 0%;
+height: 1000px;
+
+}
+
+#settingsContainer{
+position:relative;
+width:100%;
+}
+
+div#beatIndicator, div#beatIndicatorContainer{
+
+display:none;
+
+}
+
+div#audioHide{
+
+visibility:hidden;
+
+}
+
+label.bpm {
+
+font-size:3em;
+}
+
+input#bpm{
+background-color:#000000;
+font-family:Digital;
+color:ghostwhite;
+font-size:10em;
+width:30%;
+margin-top:20px;
+margin-bottom:10%;
+line-height: 200px;
+
+}
+
+input{
+Overflow: auto;
+border-style:none;  
+position:relative;
+
+}
+
+
+
+
+input#bpmMinus{
+background-size: 100%;
+background: url('../images/minus.png') no-repeat!important;
+  
+}
+
+input#bpmPlus{
+background-size: 100%;
+background: url('../images/plus.png') no-repeat!important;
+  
+}
+
+input#start{
+background-size: 100%;
+background: url('../images/on.png') no-repeat!important;
+}
+
+input#stop{
+background-size: 100%;
+background: url('../images/off.png') no-repeat!important;
+}
+input#bpmPlus,input#bpmMinus, input#start, input#stop{
+padding:20px 0px;
+width:15%;
+margin:5px;
+font-size:1.5em;
+font-weight:100;
+cursor:pointer;
+
+@include outline(none);
+
+}
+
+input#bpb,.bpbdiv label, div.bpbdiv{
+display:none;
+}
+
+button.btn{
+padding:6px 0px;
+width:9%;
+cursor:pointer;
+}
+
+/* Stop Watch */
+
+div.stopwatchwrap{
+  position:relative;
+  display:block;
+  left:25%;
+  width:50%;
+   background-color:#000;
+}
+
+span#runner{
+ 
+color:#cae65d!important;
+font-family:digital;
+font-size:5em;
+
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (max-width: 1200px) and (min-width: 992px) {
+
+input#bpm{
+width:40%;
+font-size:11em;
+margin-bottom:11%;
+}
+
+}
+@media (max-width: 992px) {
+
+input#bpm{
+    font-size:11em;
+margin-bottom:12%;
+
+}
+
+input#start,input#stop,input#bpmPlus,input#bpmMinus {
+
+width:17%;    
+}
+
+}
+
+
+/* Portrait tablets and small desktops */
+@media (min-width: 767px) and (max-width: 991px) {
+input#bpm{
+font-size:9em;
+
+  margin-bottom:10%;
+
+
+}
+div#main{
+
+left:15%;    
+width:70%;
+height:40%;
+    
+}
+
+input#start,input#stop, input#bpmPlus,input#bpmMinus {
+left:4%;
+}
+
+
+div.stopwatchwrap {
+width:53%;
+}
+
+}
+
+
+@media (min-width: 500px) and (max-width: 767px) {
+ input#bpm{
+font-size:9em;
+width:42%;
+margin-bottom:14%;
+ 
+ } 
+div#main{ 
+width:80%;
+left:8%;
+}    
+ div.stopwatchwrap {
+width:60%;
+left:20%;
+}
+ 
+}   
+
+@media (max-width:500px){
+ input#bpm{
+font-size:11.5em;
+width:42%;
+margin-bottom:3%;
+ margin-right:20%;
+ } 
+
+
+div#main{
+  left:0%;
+width:120%;  
+}
+
+  
+
+
+input#start,input#stop, input#bpmPlus,input#bpmMinus {
+width:12%;
+right:10%;
+}
+div.stopwatchwrap {
+width:70%;
+left:5%;
+}
+div#metronomeBg{
+background: url("../images/mainmobile.png") no-repeat;
+
+
+}
+
+button#startwatch{
+ right:10%;    
+       
+}
+button#stopwatch, button#resetwatch{
+@extend button#startwatch;
+
+}
+
+
+
+
+
+}

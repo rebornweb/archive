@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Digital';
+   src:    url('fonts/digital.woff') format('woff'),/* Pretty Modern Browsers */
+       url('fonts/digital.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+	    
+body{
+
+font-family:Century Gothic,sans-serif;
+
+}
+
+#main{
+position:relative;
+text-align:center;
+left:25%;
+width:50%;
+margin:7px;
+border:1px black solid;
+
+
+
+}
+span#runner{
+  z-index:999;
+}
+
+div#metronomeBg{
+background: url("../images/main.png") no-repeat 50% 0%;
+height: 1000px;
+
+}
+
+#settingsContainer{
+position:relative;
+width:100%;
+}
+
+div#beatIndicator, div#beatIndicatorContainer{
+
+display:none;
+
+}
+
+div#audioHide{
+
+visibility:hidden;
+
+}
+
+label.bpm {
+
+font-size:3em;
+}
+
+input#bpm{
+background-color:#000000;
+font-family:Digital;
+color:ghostwhite;
+font-size:10em;
+width:30%;
+margin-bottom:20%;
+}
+
+input{
+
+border-style:none;  
+  
+}
+
+input#start{
+background-size: 100%;
+background: url('../images/on.png') no-repeat!important;
+}
+
+input#stop{
+background-size: 100%;
+background: url('../images/off.png') no-repeat!important;
+}
+input.plusMinus, input#start, input#stop{
+padding:20px 0px;
+width:10%;
+margin:5px;
+font-size:1.5em;
+font-weight:100;
+cursor:pointer;
+
+}
+
+input#bpb,.bpbdiv label, div.bpbdiv{
+display:none;
+}
+
+button.btn{
+padding:6px 0px;
+width:9%;
+cursor:pointer;
+}
+
+/* Stop Watch */
+span#runner{
+ background-color:#000; 
+color:#cae65d!important;
+font-family:digital;
+font-size:5em;
+
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (max-width: 1200px) and (min-width: 992px) {
+
+input#bpm{
+width:40%;
+}
+input#start, input#stop{
+width:20%;
+
+
+}
+
+}
+@media (max-width: 992px) {
+
+input#bpm{
+width:50%;
+}
+
+input#start, input#stop{
+width:30%;
+
+
+}
+
+}
+
+@media (max-width:500px){
+
+div#main{
+  left:0%;
+width:100%;  
+}
+
+input#bpm{
+  font-size:7em;
+width:60%;
+margin-bottom: 80%;
+}
+
+input#start, input#stop{
+ 
+width:40%;
+}
+div#metronomeBg{
+background: url("../images/mainmobile.png") no-repeat;
+
+
+}
+
+
+
+}

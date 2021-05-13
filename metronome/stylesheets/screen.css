@@ -1,0 +1,309 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Digital';
+  src: url("fonts/digital.woff") format("woff"), url("fonts/digital.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+/* line 20, ../sass/screen.scss */
+body {
+  font-family: Century Gothic,sans-serif;
+}
+
+/* line 26, ../sass/screen.scss */
+div#main {
+  position: relative;
+  text-align: center;
+  left: 25%;
+  width: 50%;
+  margin: 7px;
+  border: 1px black solid;
+}
+
+/* line 37, ../sass/screen.scss */
+span#runner {
+  z-index: 999;
+}
+
+/* line 41, ../sass/screen.scss */
+div#metronomeBg {
+  background: url("../images/main.png") no-repeat 50% 0%;
+  height: 1000px;
+}
+
+/* line 47, ../sass/screen.scss */
+#settingsContainer {
+  position: relative;
+  width: 100%;
+}
+
+/* line 52, ../sass/screen.scss */
+div#beatIndicator, div#beatIndicatorContainer {
+  display: none;
+}
+
+/* line 58, ../sass/screen.scss */
+div#audioHide {
+  visibility: hidden;
+}
+
+/* line 64, ../sass/screen.scss */
+label.bpm {
+  font-size: 3em;
+}
+
+/* line 69, ../sass/screen.scss */
+input#bpm {
+  background-color: #000000;
+  font-family: Digital;
+  color: ghostwhite;
+  font-size: 10em;
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 10%;
+  line-height: 200px;
+}
+
+/* line 81, ../sass/screen.scss */
+input {
+  Overflow: auto;
+  border-style: none;
+  position: relative;
+}
+
+/* line 91, ../sass/screen.scss */
+input#bpmMinus {
+  background-size: 100%;
+  background: url("../images/minus.png") no-repeat !important;
+}
+
+/* line 97, ../sass/screen.scss */
+input#bpmPlus {
+  background-size: 100%;
+  background: url("../images/plus.png") no-repeat !important;
+}
+
+/* line 103, ../sass/screen.scss */
+input#start {
+  background-size: 100%;
+  background: url("../images/on.png") no-repeat !important;
+}
+
+/* line 108, ../sass/screen.scss */
+input#stop {
+  background-size: 100%;
+  background: url("../images/off.png") no-repeat !important;
+}
+
+/* line 112, ../sass/screen.scss */
+input#bpmPlus, input#bpmMinus, input#start, input#stop {
+  padding: 20px 0px;
+  width: 15%;
+  margin: 5px;
+  font-size: 1.5em;
+  font-weight: 100;
+  cursor: pointer;
+  -webkit-outline: none;
+  -moz-outline: none;
+  outline: none;
+}
+
+/* line 124, ../sass/screen.scss */
+input#bpb, .bpbdiv label, div.bpbdiv {
+  display: none;
+}
+
+/* line 128, ../sass/screen.scss */
+button.btn {
+  padding: 6px 0px;
+  width: 9%;
+  cursor: pointer;
+}
+
+/* Stop Watch */
+/* line 136, ../sass/screen.scss */
+div.stopwatchwrap {
+  position: relative;
+  display: block;
+  left: 25%;
+  width: 50%;
+  background-color: #000;
+}
+
+/* line 144, ../sass/screen.scss */
+span#runner {
+  color: #cae65d !important;
+  font-family: digital;
+  font-size: 5em;
+}
+
+/* Portrait tablets and medium desktops */
+@media (max-width: 1200px) and (min-width: 992px) {
+  /* line 156, ../sass/screen.scss */
+  input#bpm {
+    width: 40%;
+    font-size: 11em;
+    margin-bottom: 11%;
+  }
+}
+@media (max-width: 992px) {
+  /* line 165, ../sass/screen.scss */
+  input#bpm {
+    font-size: 11em;
+    margin-bottom: 12%;
+  }
+
+  /* line 171, ../sass/screen.scss */
+  input#start, input#stop, input#bpmPlus, input#bpmMinus {
+    width: 17%;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 767px) and (max-width: 991px) {
+  /* line 181, ../sass/screen.scss */
+  input#bpm {
+    font-size: 9em;
+    margin-bottom: 10%;
+  }
+
+  /* line 188, ../sass/screen.scss */
+  div#main {
+    left: 15%;
+    width: 70%;
+    height: 40%;
+  }
+
+  /* line 196, ../sass/screen.scss */
+  input#start, input#stop, input#bpmPlus, input#bpmMinus {
+    left: 4%;
+  }
+
+  /* line 201, ../sass/screen.scss */
+  div.stopwatchwrap {
+    width: 53%;
+  }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+  /* line 209, ../sass/screen.scss */
+  input#bpm {
+    font-size: 9em;
+    width: 42%;
+    margin-bottom: 14%;
+  }
+
+  /* line 215, ../sass/screen.scss */
+  div#main {
+    width: 80%;
+    left: 8%;
+  }
+
+  /* line 219, ../sass/screen.scss */
+  div.stopwatchwrap {
+    width: 60%;
+    left: 20%;
+  }
+}
+@media (max-width: 500px) {
+  /* line 227, ../sass/screen.scss */
+  input#bpm {
+    font-size: 11.5em;
+    width: 42%;
+    margin-bottom: 3%;
+    margin-right: 20%;
+  }
+
+  /* line 235, ../sass/screen.scss */
+  div#main {
+    left: 0%;
+    width: 120%;
+  }
+
+  /* line 243, ../sass/screen.scss */
+  input#start, input#stop, input#bpmPlus, input#bpmMinus {
+    width: 12%;
+    right: 10%;
+  }
+
+  /* line 247, ../sass/screen.scss */
+  div.stopwatchwrap {
+    width: 70%;
+    left: 5%;
+  }
+
+  /* line 251, ../sass/screen.scss */
+  div#metronomeBg {
+    background: url("../images/mainmobile.png") no-repeat;
+  }
+
+  /* line 257, ../sass/screen.scss */
+  button#startwatch, button#stopwatch, button#resetwatch {
+    right: 10%;
+  }
+}

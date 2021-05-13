@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+<!--script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script-->
+ <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+
+<script src="js/jquery.runner-min.js" type="text/javascript"></script>
+
+         
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<title>Web Metronome</title>
+</head>
+<body>
+
+<div id="main">
+                <h1>Web Metronome</h1>
+<div id="metronome">
+    <div id="metronomeBg">
+        <!--div id="beatBarContainer">
+            <div id="beatBar">&nbsp;</div>
+        </div-->
+        <br />
+        <div id="beatIndicatorContainer">
+            <div id="beatIndicator" class="beep">1</div>
+        </div>
+
+        <div id="settingsContainer">
+            <div id="settings">
+                
+                    
+					<br>
+					<input type="text" name="bpm" id="bpm" value="100" />
+					<br>
+		<input type="button" name="start" id="start" />
+
+                 <input type="button" name="stop" id="stop"  />
+		
+		<br>   
+		 <input type="button" name="bpmMinus" id="bpmMinus" class="plusMinus" value="-" />
+                    <input type="button" name="bpmPlus" id="bpmPlus" class="plusMinus" value="+" />
+<!--Stop Watch-->
+<br>
+    <span id="runner"><p></p></span>
+<br>
+<button  id="startwatch" >start</button>
+<button  id="stopwatch" >stop</button>
+<button  id="resetwatch" >reset</button>
+
+		<!--This is hidden in general.js-->
+                <div class="bpbdiv" style="display:none;">
+                    <label>Beats Per Bar:</label>
+                    <input type="text" name="bpb" id="bpb" value="4" />
+                    <input type="button" name="bpbPlus" id="bpbPlus" class="plusMinus" value="+" />
+                    <input type="button" name="bpbMinus" id="bpbMinus" class="plusMinus" value="-" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <div id="audioHide">
+        <audio id="beepOne" src="sound/beep.ogg"  controls="controls">Get a better standards compliant browser!</audio>
+        <audio id="beepTwo" src="sound/beep.ogg"  controls="controls" >Get a better standards compliant browser!</audio>
+    </div>
+	
+<!--div class="audioplayer audioplayer-stopped audioplayer-mini">
+    <embed src="sound/beep.wav" width="0" height="0" volume="100" autostart="true" loop="true" />
+    <div class="audioplayer-playpause" title="Play"><a href="#">Play</a></div>
+</div-->
+	  
+
+</body>
+
+
+
+
+<script>
+$(function(){
+
+
+$('#runner').runner({
+
+ stopAt: 999999999,
+ milliseconds: false,
+});
+
+$('#startwatch').click(function(){
+$('#runner').runner('start');
+});
+
+$('#stopwatch').click(function(){
+$('#runner').runner('stop');
+});
+
+$('#resetwatch').click(function(){
+$('#runner').runner('reset');
+});
+
+var stopwatch = $('span#runner').html();
+//alert(stopwatch);
+$( "span#runner" ).prepend("00:");
+
+/*
+//For Audio Player Jquery
+$( 'audio' ).audioPlayer({
+    classPrefix: 'audioplayer',
+    strPlay: 'Play',
+    strPause: 'Pause',
+    strVolume: 'Volume'
+});
+*/
+
+});
+
+</script>
+     <script type="text/javascript" src="js/general.js"></script>
+</html>

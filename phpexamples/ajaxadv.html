@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div class='content'>
+
+<div class='name'>Wang Chung1</div>
+<div class='caption'>Caption2</div>
+
+</div>
+
+
+</body>
+
+<script type='text/javascript'>
+ $(document).ready(function(){   
+/*stringify makes JSON objects into a string and
+parse back into JSON objects*/
+
+var $firstName = $(".name"),
+    $caption = $(".caption");
+  
+var object = {
+    name: $firstName.text(),
+    caption: $caption.text()
+}
+
+var params = JSON.stringify(object);
+
+$.ajax({
+    type: 'POST',
+    data: params,
+    dataType:'json',
+    url: 'save_to_json.php',
+    success: function(data){
+        // do something on success
+        console.log('success');
+        alert(data);
+    },
+    error: function(){
+        // do something on error
+         console.log('error :(');
+    }
+});
+ 
+ });
+</script>
+</html>
