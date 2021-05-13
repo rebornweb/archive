@@ -1,0 +1,117 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+$primary-color:#222;
+$primary-title:#333;
+$alternative-color:#EFEFEF;
+$primary-backgroundcolor:#222;
+$alternative-backgroundcolor:#454545;
+
+$primary-anchorcolor:#297be2;
+
+$primary-highlight:#F7F7F7;
+
+$primary-hover:#3cb200;
+
+
+
+@mixin user-select($foxylady){
+    
+    	-webkit-user-select: $foxylady;
+	-khtml-user-select: $foxylady;
+	-moz-user-select: $foxylady;
+	-ms-user-select: $foxylady;
+	user-select: $foxylady;
+    }
+
+
+
+
+
+
+html{
+width:100%;/*For Parallax*/
+height:100%;/*For Parallax*/
+}
+
+h1,h2,h3,h4{
+
+color:$primary-title;
+}
+
+body{
+font-family:Museosans,arial,sans-serif;   
+    
+}
+
+section.content{
+position:relative;
+width:100%;
+
+article.regForm{
+position:relative;
+width:40%;
+left:50%;
+    
+}
+
+form.commentForm{
+text-align:center;        
+}
+
+}
+
+
+article.content{
+    
+text-align:center;
+
+span#user{
+font-size:1.3em;
+text-transform:capitalize;
+    
+}
+    
+div.left{
+left:2%;    
+}
+
+}
+
+
+
+
+/*Fix this later to display none*/
+@media (min-width: 1200px) {
+
+
+
+
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width:500px){
+
+
+
+
+  
+}
+
+
+
+
